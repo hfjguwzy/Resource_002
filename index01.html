@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例</title>
+    <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
+    <style>
+        .class1 {
+            background: #444;
+            color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <label for="r1">修改颜色</label><input type="checkbox" v-model="use" id="r1">
+        <br><br>
+        <div v-bind:class="{'class1': use}">
+            v-bind:class 指令
+        </div><br>
+        <li v-for="(site,index) in webs">
+            {{index+1}}-{{site.text}}
+        </li>
+
+    </div>
+
+    <script>
+        const app = {
+            data() {
+                return {
+                    use: false,
+                    webs:[
+                        {text:'https://www.runoob.com/vue3/vue3-v-for.html'},
+                        {text:'https://www.bilibili.com/'},
+                        {text:'https://www.baidu.com/'}
+                    ]
+                }
+            }
+        }
+
+        Vue.createApp(app).mount('#app')
+    </script>
+</body>
+
+</html>
