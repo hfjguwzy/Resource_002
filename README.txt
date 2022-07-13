@@ -11,3 +11,8 @@ prectise02文件夹中存放着我的个人网站
 4.将本地修改上传到GitHub云端库
 ·git push -u origin main
 3.0版本
+
+vscode 快捷键
+ctrl + d 选择下一个相同字符
+alt + 鼠标左键 添加光标
+alt + shift + 上/下键 复制一行
