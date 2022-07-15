@@ -3,14 +3,28 @@ prectise02文件夹中存放着我的个人网站
 
 本文件夹是和github库中的https://github.com/hfjguwzy/Resource_002.git是相连的 
 1.把GitHub库中的文件拉取到本地
-·git clone +库的路径
+$git clone +库的路径
 2.将文件夹下的所有文件添加到暂存修改
-·git add .
+$git add .
 3.给git提交并备注
-·git commit -m "+提交备注+"
+$git commit -m "+提交备注+"
 4.将本地修改上传到GitHub云端库
-·git push -u origin main
-3.0版本
+$git push -u origin main
+其他git命令
+配置用户名
+$ git config --global user.name "runoob"
+配置邮箱
+$ git config --global user.email test@runoob.com
+查看仓库当前的状态，显示有变更的文件
+$ git status
+查看历史提交记录
+$ git log
+历史提交记录在一行显示
+$ git log --pretty=oneline
+版本转跳
+$ git reset --hard +唯一版本号
+查看所有操作
+$ git reflog
 
 vscode 快捷键
 ctrl + d 选择下一个相同字符
