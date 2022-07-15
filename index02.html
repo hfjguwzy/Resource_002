@@ -51,28 +51,76 @@
             box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
                 rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
         }
+
+        .daohang{
+            padding: 10px 20px;
+            border-bottom: 1px solid gray;
+            font-size:14px;
+            color:#666;
+        }
+
+        /* 当屏幕小于60px时要改变css */
+        @media (max-width:600px) {
+            .ceBian{
+                display: none;
+            }
+            .neiRong{
+                flex-direction: column;
+            }
+            .shujv{
+                flex-direction: column;
+            }
+            .youqv{
+                margin-left: 8px;
+            }
+            .shuJu{
+                margin:0 0 8px;
+                flex:auto;
+            }
+            .neiRong::-webkit-scrollbar{
+                display:none;
+            }
+        }
     </style>
 </head>
 
 <body class="flex">
     <!-- 侧边栏 -->
-    <div style="width:200px;z-index:2;" class="white shadow"></div>
+    <div style="width:200px;z-index:2;" class="white shadow ceBian">
+        <!-- 头像栏 -->
+        <div style="padding:10px;
+        align-items:center;
+        justify-content: center;
+        border-bottom: 1px solid #999;" 
+        class="flex">
+            <img src="./logo01.png" width="40px" height="40px" />
+            <div style="margin-left:10px">hfjgu_wzy</div>
+        </div>
+        <!-- 导航栏 -->
+        <div class="flex1">
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+        </div>
+    </div>
     <!-- 主区域 -->
     <div class="flex1">
         <!-- 头部栏 -->
         <div style="height:60px;z-index:1;position: relative;" class="white shadow"></div>
         <!-- <div style="overflow:auto;height:1px;" > -->
             <!-- 内容区 -->
-            <div style="overflow:auto;height:100vh;" class="flex1 flex">
+            <div style="overflow:auto;height:100vh;border: 2px solid green;" class="flex1 flex neiRong">
                 <!-- 左区 -->
                 <div style="flex:3;" class="flex column mg8">
                     <!-- 数据区 -->
-                    <div class="flex">
+                    <div style="border: 2px solid red;" class="flex shujv">
                         <!-- 数据块 -->
-                        <div style="height:100px;" class="flex1 white mgr8 shadow"></div>
-                        <div style="height:100px;" class="flex1 white mgr8 shadow"></div>
-                        <div style="height:100px;" class="flex1 white mgr8 shadow"></div>
-                        <div style="height:100px;" class="flex1 white shadow"></div>
+                        <div style="height:100px;" class="shuJu flex1 white mgr8 shadow"></div>
+                        <div style="height:100px;" class="shuJu flex1 white mgr8 shadow"></div>
+                        <div style="height:100px;" class="shuJu flex1 white mgr8 shadow"></div>
+                        <div style="height:100px;" class="shuJu flex1 white shadow"></div>
                     </div>
                     <!-- 列表区 -->
                     <div class="flex column">
@@ -86,7 +134,7 @@
                     </div>
                 </div>
                 <!-- 右区 -->
-                <div style="flex:1;" class="flex column mgr8 mgt8">
+                <div style="flex:1;" class="youqv flex column mgr8 mgt8">
                     <!-- 提示区 -->
                     <div style="height:150px;" class="white shadow"></div>
                     <!-- 消息区 -->
