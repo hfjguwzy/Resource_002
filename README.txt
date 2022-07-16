@@ -10,11 +10,11 @@ $ git add .
 $ git commit -m "+提交备注+"
 4.将本地修改上传到GitHub云端库
 $ git push -u origin main
-$ git push origin master
+$ git push origin main
 
 其他git命令
 从远程获取代码并合并本地的版本
-$ git pull origin master
+$ git pull origin main
 配置用户名
 $ git config --global user.name "+用户名+"
 配置邮箱
@@ -79,3 +79,5 @@ vscode 快捷键
 ctrl + d 选择下一个相同字符
 alt + 鼠标左键 添加光标
 alt + shift + 上/下键 复制一行
+
+/* TODO:2022/7/11 第10次修改 */
